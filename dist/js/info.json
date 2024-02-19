@@ -1,0 +1,11 @@
+{
+  "paper": "3500",
+  "cardboard": "2600",
+  "paperCardboardWeight": "2",
+  "paperCardboardPrice": "6100",
+  "glass": "4200",
+  "plastic": "4800",
+  "glassPlasticWeight": "2",
+  "glassPlasticPrice": "9000",
+  "sliderDelay" : "10000"
+}

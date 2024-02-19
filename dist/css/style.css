@@ -1,0 +1,68 @@
+body, html {
+    /*max-width: 1535px;*/
+    margin: 0 auto;
+    font-family: IranSans !important;
+    direction: rtl !important;
+    text-align: right !important;
+    scroll-behavior: smooth;
+    background-color: transparent;
+    overflow-x: hidden;
+}
+
+* {
+    transition: all 0.5s ease !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    cursor: pointer !important;
+    background-color: gray !important;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px grery;*/
+    /*border-radius: 10px;*/
+    cursor: pointer !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: dimgray;
+    border-radius: 5px;
+    cursor: pointer !important;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: darkgray;
+    cursor: pointer !important;
+
+}
+@media(max-width: 700px) {
+    ::-webkit-scrollbar {
+        width: 0 !important;
+        background: transparent !important;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: transparent !important;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: transparent !important;
+    }
+}
+
+.home{
+    background: url("/img/bg1.jpg") left top;
+    background-size:  cover;
+    width: 100%;
+    min-height: 100vh;
+}
+.home .txt{
+    color: #02753c;
+
+}
