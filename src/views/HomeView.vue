@@ -1,13 +1,15 @@
 <template>
-  <div id="carouselExampleFade" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel" data-bs-pause="false"   >
-    <div v-if="slides" class="carousel-inner h-100">
-      <div v-for="(item, index) in slides" :key="index" :id="index"  class="carousel-item bg-dark h-100" :class="{'active': index == 0}" :data-bs-interval="25000" >
-        <div style="background-size:  cover;width: 100%;min-height: 100vh;">
-          <video-section :vdo="[item,index]" autoplay loop></video-section>
-        </div>
-      </div>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel" data-bs-pause="false"  :data-bs-interval="2000" >
+<!--    <div v-if="slides" class="carousel-inner h-100">-->
+<!--      <div v-for="(item, index) in slides" :key="index" :id="index"  class="carousel-item bg-dark h-100" :class="{'active': index == 0}" :data-bs-interval="25000" >-->
+<!--        <div style="background-size:  cover;width: 100%;min-height: 100vh;">-->
+<!--          <video-section :vdo="[item,index]" autoplay loop></video-section>-->
+<!--        </div>-->
+<!--      </div>-->
 
-    </div>
+<!--    </div>-->
+    <video-section :vdo="'01/x'" autoplay loop></video-section>
+
   </div>
 
 </template>
@@ -24,6 +26,7 @@ export default {
   setup(){
     const data = ref();
     const slides = ref([]);
+    const slides1 = ref([]);
     const url = 'https://panel.recycle.webagent.ir';
     const getSlides = () => {
       slides.value = [
@@ -36,6 +39,15 @@ export default {
           '01/07',
           '01/08',
       ];
+      slides1.value = [
+        ['/vdo/birth.mp4',27],
+        ['/vdo/code.mp4',31],
+        ['/vdo/copa.mp4',21],
+        ['/vdo/football.mp4',10],
+        ['/vdo/qym.mp4',27],
+        ['/vdo/travel.mp4',28],
+
+      ];
     };
     const getData = () => {
         fetch("https://panel.recycle.webagent.ir/api/site")
@@ -46,15 +58,14 @@ export default {
     onMounted(()=>{
       setInterval(function(){
         window.location.reload(1);
-      }, 7200000);
+      }, 147000000);
       getSlides();
       getData();
-
-      see();
+      // see();
     })
 
     const see = ()=>{
-      var intervalID = window.setInterval(myCallback, 100);
+      var intervalID = window.setInterval(myCallback, 200);
 
       function myCallback() {
         let x = document.querySelector('.active');
@@ -71,7 +82,7 @@ export default {
 
     }
     return{
-      getData, data, slides, getSlides, url, see
+      getData, data, slides,slides1, getSlides, url, see
     }
   }
 }

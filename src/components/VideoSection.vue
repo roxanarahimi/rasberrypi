@@ -1,6 +1,7 @@
 <template>
   <div class="p-0 m-0 w-100 vh-100" style=" overflow: hidden">
-    <AdvancedVideo class="vdo p-0 w-100" :id="'vdo_'+index" style="margin-bottom: -10px" :cldVid="myVdo" autoplay muted loop/>
+<!--    <AdvancedVideo class="vdo p-0 w-100" :id="'vdo_'+index" style="margin-bottom: -10px" :cldVid="myVdo" autoplay loop/>-->
+    <AdvancedVideo class="vdo p-0 w-100"  style="margin-bottom: -10px" :cldVid="myVdo" autoplay loop/>
   </div>
 </template>
 
@@ -17,10 +18,10 @@
   cloudName: "dpg1tz64p",
 },
 });
-  const myVdo = cld.video(_props.vdo[0]);
-  const index = _props.vdo[1]
+  const myVdo = cld.video(_props.vdo);
+  // const index = _props.vdo[1]
   return{
-  cld, myVdo, index
+  cld, myVdo
 }
 }
 
