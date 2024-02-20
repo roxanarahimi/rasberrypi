@@ -1,5 +1,5 @@
 <template>
-  <div id="carouselExampleFade" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel" data-bs-pause="false"  >
+  <div id="carouselExampleFade" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel" data-bs-pause="false"   >
     <div v-if="slides" class="carousel-inner h-100">
       <div v-for="(item, index) in slides" :key="index" :id="index"  class="carousel-item bg-dark h-100" :class="{'active': index == 0}" :data-bs-interval="25000" >
         <div style="background-size:  cover;width: 100%;min-height: 100vh;">
@@ -54,7 +54,7 @@ export default {
     })
 
     const see = ()=>{
-      var intervalID = window.setInterval(myCallback, 200);
+      var intervalID = window.setInterval(myCallback, 100);
 
       function myCallback() {
         let x = document.querySelector('.active');

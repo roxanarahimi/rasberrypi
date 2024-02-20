@@ -1,6 +1,6 @@
 <template>
   <div class="p-0 m-0 w-100 vh-100" style=" overflow: hidden">
-    <AdvancedVideo class="vdo p-0 w-100" :id="'vdo_'+index" style="margin-bottom: -10px" :cldVid="myVdo" autoplay muted="muted" loop/>
+    <AdvancedVideo class="vdo p-0 w-100" :id="'vdo_'+index" style="margin-bottom: -10px" :cldVid="myVdo" autoplay muted loop/>
   </div>
 </template>
 
