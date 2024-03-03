@@ -1,16 +1,10 @@
 <template>
   <div id="carouselExampleFade" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel" data-bs-pause="false"  :data-bs-interval="2000" >
-<!--    <div v-if="slides" class="carousel-inner h-100">-->
-<!--      <div v-for="(item, index) in slides" :key="index" :id="index"  class="carousel-item bg-dark h-100" :class="{'active': index == 0}" :data-bs-interval="25000" >-->
-<!--        <div style="background-size:  cover;width: 100%;min-height: 100vh;">-->
-<!--          <video-section :vdo="[item,index]" autoplay loop></video-section>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--    </div>-->
-    <video src="/vdo/vdo.mp4" autoplay loop class="w-100"></video>
+<!--    <video id="vdo" src="/vdo/vdo.mp4" autoplay loop class="w-100"></video>-->
 <!--    <video-section :vdo="'01/x'" autoplay loop></video-section>-->
-
+    <video class="w-100" loop="true" autoplay="autoplay" muted id="vdo">
+      <source type="video/mp4" src="/vdo/vdo.mp4">
+    </video>
   </div>
 
 </template>
@@ -57,6 +51,11 @@ export default {
             .catch((e) => console.error(e));
     }
     onMounted(()=>{
+
+      setTimeout(()=>{
+        document.getElementById('vdo').muted = false;
+
+      },500)
       setInterval(function(){
         window.location.reload(1);
       }, 147000000);
