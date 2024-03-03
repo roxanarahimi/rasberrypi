@@ -55,7 +55,7 @@ export default {
       setTimeout(()=>{
         document.getElementById('vdo').muted = false;
 
-      },5000)
+      },3000)
       setInterval(function(){
         window.location.reload(1);
       }, 147000000);
