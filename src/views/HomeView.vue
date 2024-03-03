@@ -2,7 +2,7 @@
   <div id="carouselExampleFade" class="carousel slide carousel-fade vh-100" data-bs-ride="carousel" data-bs-pause="false"  :data-bs-interval="2000" >
 <!--    <video id="vdo" src="/vdo/vdo.mp4" autoplay loop class="w-100"></video>-->
 <!--    <video-section :vdo="'01/x'" autoplay loop></video-section>-->
-    <video class="w-100" loop="true" autoplay="autoplay" muted id="vdo">
+    <video class="w-100" loop="true" autoplay="autoplay" id="vdo">
       <source type="video/mp4" src="/vdo/vdo.mp4">
     </video>
   </div>
@@ -51,11 +51,6 @@ export default {
             .catch((e) => console.error(e));
     }
     onMounted(()=>{
-
-      setTimeout(()=>{
-        document.getElementById('vdo').muted = false;
-
-      },3000)
       setInterval(function(){
         window.location.reload(1);
       }, 147000000);
