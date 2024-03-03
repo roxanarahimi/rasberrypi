@@ -8,8 +8,8 @@
 <!--      </div>-->
 
 <!--    </div>-->
-<!--    <video src="/vdo/vdo.mp4" autoplay loop class="w-100"></video>-->
-    <video-section :vdo="'01/x'" autoplay loop></video-section>
+    <video src="/vdo/vdo.mp4" autoplay loop class="w-100"></video>
+<!--    <video-section :vdo="'01/x'" autoplay loop></video-section>-->
 
   </div>
 
